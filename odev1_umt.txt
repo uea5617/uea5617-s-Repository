@@ -1,0 +1,21 @@
+import random
+file_futbolcular = open("futbolcular.txt","r+",encoding="utf-8")
+file_gs = open("gs.txt","r+",encoding="utf-8")
+file_bjk = open("bjk.txt","r+",encoding="utf-8")
+file_fb = open("fb.txt","r+",encoding="utf-8")
+
+files = [file_gs , file_bjk , file_fb]
+
+file_futbolcular.seek(0)
+futbolcular = file_futbolcular.read().split(",")
+
+for i in range(3):
+    files[i].write(futbolcular[random.randint(0,3)])
+
+
+
+
+file_futbolcular.close()
+file_gs.close()
+file_bjk.close()
+file_fb.close()
